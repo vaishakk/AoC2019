@@ -24,16 +24,16 @@ def findPathtoCOM(obj):
         file = open('Input6.txt')
         for line in file:
             l = line.split('\n')[0]
-            print(l)
+            #print(l)
             if l[-3:] == o:
                 path.append(l[0:3])
 
                 o = l[0:3]
-                print(o)
+                #print(o)
                 break
     return path
 
-'''
+
 #Part 1
 obj = ['COM']
 obj_heir = [obj]
@@ -50,8 +50,8 @@ for line in file:
         countOrbits(l[-3:])
 for c in obj_counts.values():
     count = count + c
-print(obj_counts)
-print(count)'''
+#print(obj_counts)
+print('Number of orbits = '+str(count))
 ###############################
 #Part 2
 path1 = findPathtoCOM('YOU')
@@ -68,6 +68,6 @@ for obj1 in path1:
             plen = k1 + k2
             flag = 1
 
-print(path1)
-print(path2)
-print(plen-2)
+#print(path1)
+#print(path2)
+print('Number of orbit changes required = '+str(plen-2))
